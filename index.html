@@ -1,0 +1,140 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="utf-8">
+	<title>Mi Web Responsive</title>
+	<meta name="keywords" content="curso, responsive, html5, css3">
+	<meta name="author" content="josè luis Tineo">
+
+	<!--Viewport para dispositivos mòviles-->
+	<meta name="viewport" content="width=device-width", initial-scale=1.0">
+
+	<link rel="icon"  href="favicon.ico">
+
+	<!-- Hojas de estilo -->
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="css/estilos.css" media="screen">
+
+	<!-- javascript-->
+	<script src="js/modernizr-2.8.3-respond-1.4.2.min" ></
+	script>
+	<script src="./js/jquery-1.11.2.min" ></script> 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js " ></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.caroufredsel/6.2.1/jquery.carouFredSel.packed.js"></script>
+
+	
+
+</head>
+<body> 
+
+		<header>
+			<div class="container">
+				<img id="logo" src="images/logoDefinitivo.png" alt="logo">
+		</header>
+
+		<nav id="menu">
+		<ul class="clearfix container">
+		<li><a href="#">Home</a></li>
+		<li><a href="#">Servicios</a></li>
+		<li><a href="#">Nosotros</a></li>
+		<li><a href="#">Diseño</a></li>
+		<li><a href="#">Blog</a></li>
+		<li><a href="#">Contacto</a></li>
+		
+		</ul>
+		<a href="#" id="pull">Menú</a>
+
+		</nav>
+    <!--Sliders-->
+		<section id="slideshow">
+		<div id="slider">
+		<div class="slide"> <img src="images/slideshow/slide1.jpg"  alt="creaciones yanmary"></div>
+		<div class="slide"> <img src="images/slideshow/slide2.jpg"  alt="creaciones yanmary"></div>
+		
+
+		</div>
+
+		<!--fin del slider-->
+		</section> 
+		<!--Fin del slideshow-->
+		
+	<div class="container">
+		<h2>Lorem Ipsum</h2>
+
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas? </p>
+
+		<br>
+
+		<div id="col-1">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis
+
+		</div>
+		<div id="col-2">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis psum dolor sit amet, consectetur adipisicing elit. Eligendi non
+
+		</div>
+
+	</div>
+
+	<div class="clearfix"></div>
+
+	<footer> &copy; 2016-2018 Creaciones Yanmary</footer>
+</body> 
+
+	 
+ <!--script desde el cdn de jquery para el menu-->
+
+	<script>
+		$(function() {
+
+			var pull   = $('#pull');
+				menu = $('nav ul');
+				menuHeight = menu.height(); 
+
+
+				$(pull).on('click', function (e){
+					e.preventDefault();
+					menu.slideToggle();
+
+				});
+
+				$(window).resize(function(){
+
+					var w = $(window).width();
+					if(w > 320 && menu.is(':hidden')) {
+						menu.removeAttr('style');
+					}
+
+
+				});
+
+			});
+
+
+	</script> 
+	<!--slider-->
+	<script type="text/javascript">
+$("#slider").carouFredSel({
+	responsive : true,
+	scroll : {
+		fx : "crossfade",
+		easing : "swing",
+		duration : 500,
+
+
+	},
+	items : {
+		visible : 1,
+		height : "27%"
+	}
+});
+
+</script>
+
+
+
+
+</html>
